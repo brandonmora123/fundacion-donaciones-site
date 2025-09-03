@@ -17,7 +17,6 @@ import {
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 function Dashboard({ user, onLogout }) {
-  const navigate = useNavigate();
 
   const [stats, setStats] = useState({
     inventario: 0,
