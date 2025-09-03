@@ -17,8 +17,8 @@ function PerfilBeneficiario() {
 
         // Solo dos peticiones: beneficiario + entregas
         const [benefRes, entregasRes] = await Promise.all([
-          axios.get(`http://localhost:3001/api/beneficiarios/${id}`, { headers }),
-          axios.get(`http://localhost:3001/api/entregas/beneficiario/${id}`, { headers })
+          axios.get(`https://agile-nature-production.up.railway.app/api/beneficiarios/${id}`, { headers }),
+          axios.get(`https://agile-nature-production.up.railway.app/api/entregas/beneficiario/${id}`, { headers })
         ]);
 
         setBeneficiario(benefRes.data);

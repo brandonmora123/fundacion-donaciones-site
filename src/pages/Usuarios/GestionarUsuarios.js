@@ -9,7 +9,7 @@ const GestionarUsuarios = () => {
   useEffect(() => {
     const fetchUsuarios = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/usuarios', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/usuarios', {
           headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
         });
         setUsuarios(res.data);
@@ -23,7 +23,7 @@ const GestionarUsuarios = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/api/usuarios', form, {
+      await axios.post('https://agile-nature-production.up.railway.app/api/usuarios', form, {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       alert('Usuario creado con éxito');

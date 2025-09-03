@@ -8,7 +8,7 @@ function GestionarTareas() {
   useEffect(() => {
     const fetchTareas = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/tareas', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/tareas', {
           headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
         });
         setTareas(res.data);

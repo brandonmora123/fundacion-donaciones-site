@@ -24,7 +24,7 @@ function FormBeneficiario() {
     const cargarDistritos = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:3001/api/distritos', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/distritos', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         setDistritos(res.data);
@@ -50,7 +50,7 @@ function FormBeneficiario() {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:3001/api/beneficiarios', form, {
+      await axios.post('https://agile-nature-production.up.railway.app/api/beneficiarios', form, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 

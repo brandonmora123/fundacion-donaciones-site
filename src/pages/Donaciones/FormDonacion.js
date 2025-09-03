@@ -38,8 +38,8 @@ function FormDonacion() {
         console.log('Iniciando carga de donantes y campañas...');
 
         const [donantesRes, campanasRes] = await Promise.all([
-          axios.get('http://localhost:3001/api/donantes', { headers }),
-          axios.get('http://localhost:3001/api/campanas', { headers })
+          axios.get('https://agile-nature-production.up.railway.app/api/donantes', { headers }),
+          axios.get('https://agile-nature-production.up.railway.app/api/campanas', { headers })
         ]);
 
         // Depuración: Ver respuestas
@@ -120,7 +120,7 @@ function FormDonacion() {
         throw new Error('Token no disponible');
       }
 
-      await axios.post('http://localhost:3001/api/donaciones', donacionData, {
+      await axios.post('https://agile-nature-production.up.railway.app/api/donaciones', donacionData, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 

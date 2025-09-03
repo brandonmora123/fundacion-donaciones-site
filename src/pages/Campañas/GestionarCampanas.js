@@ -20,7 +20,7 @@ function GestionarCampanas() {
   useEffect(() => {
     const fetchCampanas = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/campanas', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/campanas', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setCampanas(res.data);
@@ -45,7 +45,7 @@ function GestionarCampanas() {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post('http://localhost:3001/api/campanas', form, {
+      await axios.post('https://agile-nature-production.up.railway.app/api/campanas', form, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert('✅ Campaña creada con éxito');
@@ -62,7 +62,7 @@ function GestionarCampanas() {
       });
 
       // Recargar lista
-      const res = await axios.get('http://localhost:3001/api/campanas', {
+      const res = await axios.get('https://agile-nature-production.up.railway.app/api/campanas', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setCampanas(res.data);

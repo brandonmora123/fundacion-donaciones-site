@@ -33,8 +33,8 @@ function FormDonacion() {
         const token = localStorage.getItem('token');
         const headers = { Authorization: `Bearer ${token}` };
 
-        const donantesRes = await axios.get('http://localhost:3001/api/donantes', { headers });
-        const campanasRes = await axios.get('http://localhost:3001/api/campanas', { headers });
+        const donantesRes = await axios.get('https://agile-nature-production.up.railway.app/api/donantes', { headers });
+        const campanasRes = await axios.get('https://agile-nature-production.up.railway.app/api/campanas', { headers });
 
         setDonantes(Array.isArray(donantesRes.data) ? donantesRes.data : []);
         setCampanas(Array.isArray(campanasRes.data) ? campanasRes.data : []);
@@ -79,7 +79,7 @@ function FormDonacion() {
     try {
       const token = localStorage.getItem('token');
 
-      await axios.post('http://localhost:3001/api/donaciones', {
+      await axios.post('https://agile-nature-production.up.railway.app/api/donaciones', {
         ...form,
         cantidad: form.tipo === 'En especie' ? Number(form.cantidad) : null,
         valor_monetario: form.tipo === 'Monetaria' ? Number(form.valor_monetario) : null,

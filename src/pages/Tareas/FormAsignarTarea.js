@@ -25,8 +25,8 @@ function FormAsignarTarea() {
         const headers = { 'Authorization': `Bearer ${token}` };
 
         const [usuariosRes, campanasRes] = await Promise.all([
-          axios.get('http://localhost:3001/api/usuarios', { headers }),
-          axios.get('http://localhost:3001/api/campanas', { headers })
+          axios.get('https://agile-nature-production.up.railway.app/api/usuarios', { headers }),
+          axios.get('https://agile-nature-production.up.railway.app/api/campanas', { headers })
         ]);
 
         setUsuarios(usuariosRes.data);
@@ -53,7 +53,7 @@ function FormAsignarTarea() {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:3001/api/tareas', form, {
+      await axios.post('https://agile-nature-production.up.railway.app/api/tareas', form, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 

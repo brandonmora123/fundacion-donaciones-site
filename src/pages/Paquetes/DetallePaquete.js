@@ -13,7 +13,7 @@ function DetallePaquete() {
     const fetchPaquete = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get(`http://localhost:3001/api/paquetes/codigo/${id}`, {
+        const res = await axios.get(`https://agile-nature-production.up.railway.app/api/paquetes/codigo/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 

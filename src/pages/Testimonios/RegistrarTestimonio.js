@@ -10,7 +10,7 @@ function RegistrarTestimonio() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/api/testimonios', {
+      await axios.post('https://agile-nature-production.up.railway.app/api/testimonios', {
         id_entrega, comentario, calificacion, anonimo
       }, {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }

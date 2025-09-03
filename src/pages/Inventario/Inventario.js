@@ -11,7 +11,7 @@ function Inventario() {
         const token = localStorage.getItem('token');
         const headers = { Authorization: `Bearer ${token}` };
 
-        const res = await axios.get('http://localhost:3001/api/donaciones', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/donaciones', {
           headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
         });
         setDonaciones(res.data);

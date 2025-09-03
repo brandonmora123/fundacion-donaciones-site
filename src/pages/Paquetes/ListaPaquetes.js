@@ -12,7 +12,7 @@ const ListaPaquetes = () => {
     const fetchPaquetes = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:3001/api/paquetes', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/paquetes', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setPaquetes(Array.isArray(res.data) ? res.data : []);

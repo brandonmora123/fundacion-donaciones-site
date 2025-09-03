@@ -10,7 +10,7 @@ function ListaDonantes() {
   useEffect(() => {
     const fetchDonantes = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/donantes', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/donantes', {
           headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
         });
         setDonantes(res.data);

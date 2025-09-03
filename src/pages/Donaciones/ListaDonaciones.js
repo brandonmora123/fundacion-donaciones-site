@@ -10,7 +10,7 @@ const ListaDonaciones = () => {
     const fetchDonaciones = async () => {
       try {
         const res = await axios.get(
-          'http://localhost:3001/api/donaciones',
+          'https://agile-nature-production.up.railway.app/api/donaciones',
           { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
         );
         setDonaciones(res.data);

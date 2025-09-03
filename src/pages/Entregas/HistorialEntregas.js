@@ -7,7 +7,7 @@ function HistorialEntregas() {
   useEffect(() => {
     const fetchEntregas = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/entregas', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/entregas', {
           headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
         });
         setEntregas(res.data);

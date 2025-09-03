@@ -19,7 +19,7 @@ function RegistrarEntrega() {
     const fetchBeneficiarios = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:3001/api/beneficiarios', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/beneficiarios', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setBeneficiarios(res.data);
@@ -42,7 +42,7 @@ function RegistrarEntrega() {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`http://localhost:3001/api/paquetes/codigo/${codigo}`, {
+      const res = await axios.get(`https://agile-nature-production.up.railway.app/api/paquetes/codigo/${codigo}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -76,7 +76,7 @@ function RegistrarEntrega() {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:3001/api/entregas', formData, {
+      await axios.post('https://agile-nature-production.up.railway.app/api/entregas', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'

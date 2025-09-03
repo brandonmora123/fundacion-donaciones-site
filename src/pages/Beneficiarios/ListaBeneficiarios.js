@@ -14,7 +14,7 @@ function ListaBeneficiarios() {
       setLoading(true);
       setError('');
       try {
-        const res = await axios.get('http://localhost:3001/api/beneficiarios', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/beneficiarios', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
         setBeneficiarios(res.data);

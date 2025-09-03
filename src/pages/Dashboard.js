@@ -40,7 +40,7 @@ function Dashboard({ user, onLogout }) {
         const token = localStorage.getItem('token');
         if (!token) throw new Error('No autorizado');
 
-        const res = await axios.get('http://localhost:3001/api/dashboard/dash', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/dashboard/dash', {
           headers: { Authorization: `Bearer ${token}` },
         });
 

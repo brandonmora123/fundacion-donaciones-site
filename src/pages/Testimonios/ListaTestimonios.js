@@ -15,7 +15,7 @@ function ListaTestimonios() {
           return;
         }
 
-        const res = await axios.get('http://localhost:3001/api/testimonios', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/testimonios', {
           headers: {
             'Authorization': `Bearer ${token}`
           }

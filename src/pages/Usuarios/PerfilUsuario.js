@@ -49,7 +49,7 @@ function PerfilUsuario({ user: propUser }) {
       const token = localStorage.getItem('token');
       const userId = user.id_usuario;
 
-      await axios.put(`http://localhost:3001/api/usuarios/${userId}`, form, {
+      await axios.put(`https://agile-nature-production.up.railway.app/api/usuarios/${userId}`, form, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'

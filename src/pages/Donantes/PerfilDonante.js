@@ -16,11 +16,11 @@ function PerfilDonante() {
         const headers = { Authorization: `Bearer ${token}` };
 
         // Llamadas a la API
-        const donanteRes = await axios.get(`http://localhost:3001/api/donantes/${id}`, { headers });
+        const donanteRes = await axios.get(`https://agile-nature-production.up.railway.app/api/donantes/${id}`, { headers });
 
         let donacionesRes;
         try {
-          donacionesRes = await axios.get(`http://localhost:3001/api/donaciones/donante/${id}`, { headers });
+          donacionesRes = await axios.get(`https://agile-nature-production.up.railway.app/api/donaciones/donante/${id}`, { headers });
           setDonaciones(donacionesRes.data);
           if (donacionesRes.data.length === 0) {
             setMensaje('Este donante aún no tiene donaciones.');

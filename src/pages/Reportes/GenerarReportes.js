@@ -6,7 +6,7 @@ const GenerarReportes = () => {
     try {
       const token = localStorage.getItem('token'); // si usas autenticación
       const response = await axios.get(
-        'http://localhost:3001/api/excel/reporte-semanal',
+        'https://agile-nature-production.up.railway.app/api/excel/reporte-semanal',
         {
           responseType: 'blob', // importante para archivos binarios
           headers: { Authorization: `Bearer ${token}` },

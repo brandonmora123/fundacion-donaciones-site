@@ -11,7 +11,7 @@ function ListaTareas() {
     const cargarTareas = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:3001/api/tareas', {
+        const res = await axios.get('https://agile-nature-production.up.railway.app/api/tareas', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         setTareas(res.data);
@@ -29,7 +29,7 @@ function ListaTareas() {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:3001/api/tareas/${id}`, {
+      await axios.delete(`https://agile-nature-production.up.railway.app/api/tareas/${id}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       setTareas(tareas.filter(t => t.id_tarea !== id));

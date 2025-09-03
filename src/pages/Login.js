@@ -9,7 +9,7 @@ function Login({ onLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3001/api/auth/login', { correo, contrasena });
+      const res = await axios.post('https://agile-nature-production.up.railway.app/api/auth/login', { correo, contrasena });
       onLogin(res.data);
     } catch (err) {
       setError(err.response?.data?.error || 'Error al iniciar sesión');
