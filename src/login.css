@@ -1,0 +1,8 @@
+.login-background {
+    min-height: 100vh;
+    background-image: url('./shared/login.jpeg'); /* coloca tu imagen en /public/imagenes/ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  

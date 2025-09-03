@@ -1,0 +1,93 @@
+/* src/index.css */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos del Sidebar */
+.sidebar {
+  background-color: #176fda;
+  color: white;
+  transition: width 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  overflow-x: hidden;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar h5 {
+  background-color: #155fa3;
+  margin: 0;
+  padding: 15px;
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 12px 15px;
+  border-radius: 5px;
+  margin: 5px 10px;
+  transition: all 0.2s;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Contenido principal con margen si el sidebar está abierto */
+.main-content.shifted {
+  margin-left: 250px;
+}
+
+/* Tarjetas del Dashboard */
+.card.bg-info {
+  background-color: #176fda !important;
+  color: white;
+}
+
+.card.bg-success {
+  background-color: #198754 !important;
+  color: white;
+}
+
+.card.bg-warning {
+  background-color: #ffc107 !important;
+  color: #000;
+}
+
+.card.bg-primary {
+  background-color: #0d6efd !important;
+  color: white;
+}
+
+/* Botones personalizados */
+.btn-primary {
+  background-color: #176fda;
+  border-color: #176fda;
+}
+
+.btn-primary:hover {
+  background-color: #155fa3;
+  border-color: #155fa3;
+}
+
+/* Tablas */
+.table thead th {
+  background-color: #176fda;
+  color: white;
+  border-top: none;
+}
+
+/* Alertas */
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-color: #ffeaa7;
+}
